@@ -1,0 +1,19 @@
+tasks:
+  - init: |
+      docker-compose pull
+  - command: |
+      docker-compose up
+
+ports:
+  - port: 8080
+    visibility: public
+  - port: 6379
+    visibility: public
+  - port: 5173
+    visibility: public
+  - port: 8081
+    visibility: public
+
+vscode:
+  extensions:
+    - ms-azuretools.vscode-docker
